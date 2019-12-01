@@ -112,6 +112,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     private final MapActivity.MyHandler mHandler = new MapActivity.MyHandler(this);
 
+    // 값 전달 핸들러 선언
     private static class MyHandler extends Handler {
         private final WeakReference<MapActivity> weakReference;
 
@@ -142,6 +143,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         }
     }
 
+    // 서버 통신값 파싱 후 액티비티 값 전달 스레드
     class getJsonClass extends Thread {
 
         @Override
